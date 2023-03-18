@@ -1,0 +1,43 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of people who  have  been  added  to
+  Friendbook.
+
+===============
+  FbUnfriend
+===============
+
+- Worst case time complexity: O(logn)
+
+- Explanation: Because both MapContains and MapGet functions are O(logn),
+And these two functions are in the function nameToId.
+Therefore, the function nameToId is O(logn). And because we use an adjacency matrix. therefore,
+Find the relationship between two people and modify it, is O(1). So, for all
+Worst case time complexity: O(logn).
+
+===============
+FbMutualFriends
+===============
+
+- Worst case time complexity: O(nlogn)
+
+- Explanation: the function FbHasPerson is O(logn), and we has a for loop, which is O(n),
+furthermore, inside for loop, we have function FbIsFriend, which is o(logn), since 
+the function listnew and listappend is o(1), so we can ignore that. thus, for all
+is o(n * logn) = o(nlogn). 
+
+===============
+ FbFriendRecs1
+===============
+
+- Worst case time complexity: O(n^3)
+
+- Explanation: We have two nested for loops in this function. 
+Inside the second loop there is the function do_FbFriendRecs1. 
+For the function do_FbFriendRecs1, because we have a for loop inside this function. 
+so, it is O(n). and for the worse case, maybe this person don't have any friends.
+Therefore, we can say that we have three for loops, one in one, is O(n^3). 
+And the functions FbHasPerson and nameToId are both O(logn), so we can ignore it.
+Therefore, it is O(n^3) for all.
+

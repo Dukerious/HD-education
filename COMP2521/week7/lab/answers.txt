@@ -1,0 +1,30 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of cells in the maze.
+
+============
+  solveBfs
+============
+
+- Worst case time complexity: O(n)
+
+- Explanation: 
+  Since, we use bfs, and its about queue, and enqueue, dequeue its constant
+  we can ingore that, and the worst case its that we met every cells, so its n,
+  and for every cell we just search 4 neighbors, which its constant,
+  and for free and helper function its linear.
+  Thus, for all its O(n).
+
+============
+  solveDfs
+============
+
+- Worst case time complexity: O(n)
+
+- Explanation:
+  Since, we use dfs, and its about stack, and pop, push its constant, so 
+  we can ingore that. Furthermore, the worst case its that we met every cells,
+  so its n, and every cells has been in stack. and for free and helper function
+  also its linear. Thus, for all its O(n).
+

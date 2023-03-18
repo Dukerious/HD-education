@@ -1,0 +1,8 @@
+Q3. (a)
+hight is 1, so the maximum is 4^2 - 1 = 15.
+
+
+Q3. (b)
+20, 30, 50, if the node is full, we need promotion, so the 30 will be going to root.
+
+

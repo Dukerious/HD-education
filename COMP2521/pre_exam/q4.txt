@@ -1,0 +1,4 @@
+Q4.
+Since is always divide by 2, so its O(logn).
+
+

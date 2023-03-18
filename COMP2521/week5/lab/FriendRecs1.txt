@@ -1,0 +1,11 @@
++ Ron
++ Hermione
++ Duke
++ Tinna
++ Harry
+f Harry Ron
+f Duke Ron
+f Harry Hermione
+f Duke Hermione
+f Hermione Tinna
+r Duke

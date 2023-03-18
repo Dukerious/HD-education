@@ -1,0 +1,10 @@
+Question 1
+
+What is the time complexity of the algorithm? Justify your answer.
+
+O(n*logn), since it separate a size of n always divide by 2, so its logn, and 
+convert a problem to 2 subproblem its n, and merge back, its also n,
+Thus, for each iteration its O(n).
+So, for all its O(n*logn).
+
+

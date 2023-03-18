@@ -1,0 +1,9 @@
+Q5. (a)
+the euler path is walk each edge in the graph only once.
+and the Hamilton path is walk each vertex in the graph only once.
+
+
+Q5. (b)
+euler path: since the vertex degree all are the odds number, so doesn't exist.
+Hamilton path: 0-1, 1-3, 3-2.
+

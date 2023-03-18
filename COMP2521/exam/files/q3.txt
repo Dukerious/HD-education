@@ -1,0 +1,34 @@
+Question 3
+
+Note: if you need to promote a value, you must promote the smaller 
+value from the available alternatives (if any). Justify your answer.
+
+(a) 
+(a1) What value(s) would be stored in the root node of the above 2-3-4 
+     tree after the insertion of the value 8? 
+     Justify your answer.
+     12 35 60, 
+     since after insert 8, the node not full.
+
+
+(a2) What value(s) would be stored in the node that now contains 8? 
+     Justify your answer.
+     1, 7, 8, 
+     since the node not full, not promotion need.
+
+
+(b) 
+(b1) What value(s) would be stored in the root node of the above 2-3-4 
+     tree after the insertion of the value 50? 
+     Justify your answer.
+     its 12.
+     since after insert 50, the node(36, 44, 57), its full, and after first
+     promotion, the root node also full, so keep promotion.
+
+(b2) What value(s) would be stored in the node that now contains 50? 
+     Justify your answer.
+     44, 50, 57
+     since after first promotion, the smallest value its 36, need to promote.
+
+
+

@@ -1,0 +1,9 @@
++ Harry
++ Ron
++ Hermione
++ Duke
+f Harry Ron
+f Ron Hermione
+f Duke Harry
+f Duke Hermione
+m Harry Hermione

@@ -1,0 +1,16 @@
+Q2. (a)
+11
+
+
+Q2. (b)
+d
+
+
+Q2. (c)
+two new nodes, which are u and s. 
+
+
+Q2. (d)
+zero new nodes, since we have d and o in the tries.
+
+

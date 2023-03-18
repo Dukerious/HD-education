@@ -1,0 +1,6 @@
+Question 2
+
+What is the maximum input size? Justify your answer.
+
+10^n = 10^1000 / 10000; n = 996.
+
