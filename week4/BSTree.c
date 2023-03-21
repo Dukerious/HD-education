@@ -144,8 +144,8 @@ Tree TreeDelete(Tree t, Item it) {
    }
    else {
       Tree found = t;
-      t = joinTrees(t -> left, t -< right);
-      free(found)
+      t = joinTrees(t -> left, t -> right);
+      free(found);
    }
    return t;
 }
@@ -214,11 +214,11 @@ Tree InsertAVL(Tree t, int val) {
    if (t == NULL) {
       return newNode(val);
    }
-   if (t -> data < val) {
-      t -> left = InsertAVL(t-> right, val);
+   if (t -> data > val) {
+      t -> left = InsertAVL(t-> left, val);
    }
-   else if ( t-> data >val) {
-      t -> right = InsertAVL(t-> left, val);
+   else if ( t-> data < val) {
+      t -> right = InsertAVL(t-> right, val);
    }
    int l = TreeHeight(t -> left);
    int r = TreeHeight(t -> right);
@@ -229,8 +229,8 @@ Tree InsertAVL(Tree t, int val) {
       t = rotateRight(t);
    }
    else if (r - l > 1) {
-       if(t -> left -> data < val) {
-         t -> left = rotateRight(t->right);
+       if(t -> right -> data > val) {
+         t -> right = rotateRight(t->right);
       }
       t = rotateLeft(t);
    }
