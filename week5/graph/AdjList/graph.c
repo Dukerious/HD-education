@@ -1,8 +1,14 @@
 typedef int Vertex;
+
+
+
 struct edge{
 	Vertex w;
 	Edge next;
 }
+
+
+
 typedef struct edge *Edge;
 
 struct graph {

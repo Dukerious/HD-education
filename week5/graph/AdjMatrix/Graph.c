@@ -10,6 +10,7 @@
 struct graph {
 	int nV;
 	bool **edges;
+	int **weight;
 };
 
 static bool validVertex(Graph g, Vertex v);

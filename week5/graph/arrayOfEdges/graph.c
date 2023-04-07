@@ -1,7 +1,11 @@
 typedef int Vertex;
+
+
+
 typedef struct {
 	Vertex v;
 	Vertex w;
+    int weight;
 } Edge;
 
 struct graph {

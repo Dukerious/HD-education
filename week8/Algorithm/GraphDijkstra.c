@@ -18,9 +18,10 @@ struct graph {
 
 static bool doHasCycle(Graph g, Vertex v, Vertex prev, bool *visited);
 static int  validVertex(Graph g, Vertex v);
-static PQ SortWeight(Graph g);
 ////////////////////////////////////////////////////////////////////////
-PQ sorting_edge(Graph g);
+void ShortestInsertEdge(Graph g, Graph shortest, int dest, int src, int *pred);
+int findMinDis(double *dist, int nV, int *setV);
+void relax(int v, Graph g, double *dist, int *pred);
 Graph GraphNew(int nV) {
     assert(nV > 0);
 
@@ -145,43 +146,69 @@ static bool doHasCycle(Graph g, Vertex v, Vertex prev, bool *visited) {
 
 ////////////////////////////////////////////////////////////////////////
 // Your task
-
+// tracing Dijkstra's Algorithm.
 Graph GraphMST(Graph g) {
-    Graph MST = GraphNew(g -> nV);
-    PQ SortedEdge = SortWeight(g);
-    int num = 0;
-    while(!PQIsEmpty(SortedEdge)) {
-        Edge e = PQExtract(SortedEdge);
-        GraphInsertEdge(MST, e);
-        num++;
-        if(GraphHasCycle(MST)) {
-            GraphRemoveEdge(MST, e.v, e.w);
-            num--;
+    int nV = g -> nV; int dest = nV - 1;
+    Graph shortest = GraphNew(nV);
+    int *pred = malloc(nV * sizeof(int));
+    for(int i = 0; i < nV; i++)
+        pred[i] = -1;
+    double *dist = malloc(nV * sizeof(double));
+    for(int i = 0; i < nV; i++)
+        dist[i] = 10000;
+    int *setV = malloc(nV * sizeof(int));
+    for(int i = 0; i < nV; i++)
+        setV[i] = i;
+
+    int numV = nV; int src = 0; dist[src] = 0;
+    while (numV != 0) {
+        int v = findMinDis(dist, nV, setV);
+        setV[v] = -1;
+        relax(v, g, dist, pred);
+        numV--;
+    }
+    ShortestInsertEdge(g, shortest, dest, src, pred);
+    free(dist); free(pred);
+    return shortest;
+}
+void ShortestInsertEdge(Graph g, Graph shortest, int dest, int src, int *pred) {
+    while (dest != src) {
+        int v = dest; int w = pred[dest];
+        if(pred[dest] == -1) {
+            w = src;
         }
-        if(num == g -> nV - 1) {
-            PQFree(SortedEdge);
-            return MST;
+        double weight = g -> edges[v][w];
+        if(weight <= 0) {
+            return;
+        }
+        Edge e = {v, w, weight};
+        GraphInsertEdge(shortest, e);
+        dest = pred[dest];
+    }
+}
+int findMinDis(double *dist, int nV, int *setV) {
+    double min = 10000;
+    int minindex = 0;
+    for(int i = 0; i < nV; i++) {
+        if(min > dist[i] && setV[i] != -1) {
+            min = dist[i];
+            minindex = i;
         }
     }
-    PQFree(SortedEdge);
-    GraphFree(MST);
-    return NULL;
+    return minindex;
 }
-
-////////////////////////////////////////////////////////////////////////
-
-static PQ SortWeight(Graph g) {
-    PQ pq = PQNew();
-    for(int v = 0; v < g -> nV; v++) {
-        for(int w = v + 1; w < g -> nV; w++) {
-            if(GraphIsAdjacent(g, v, w)) {
-                Edge e = {v, w, g -> edges[v][w]};
-                PQInsert(pq, e);
+void relax(int v, Graph g, double *dist, int *pred) {
+    for(int w = 0; w < g -> nV; w++){
+        if(GraphIsAdjacent(g, v, w)){
+            double weight = g -> edges[v][w];
+            if(dist[v] + weight < dist[w]) {
+                dist[w] = dist[v] + weight;
+                pred[w] = v;
             }
         }
     }
-    return pq;
 }
+////////////////////////////////////////////////////////////////////////
 static int validVertex(Graph g, Vertex v) {
     return v >= 0 && v < g->nV;
 }

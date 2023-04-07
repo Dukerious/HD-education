@@ -1,27 +1,32 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "Graph.h"
-int degree(Graph g, int nV, Vertex v) {
+
+int degree(Graph g, int nv, Vertex v) {
    int deg = 0;
-   Vertex w;
-   for (w = 0; w < nV; w++)
-      if (adjacent(g, v, w))
-	      deg++;
+   for(Vertex w; w < nv; w++) {
+      if(adjacent(g, v, w))
+         deg ++;
+   }
    return deg;
 }
+
 bool hasEulerPath(Graph g, int nV, Vertex v, Vertex w) {
-   if (v != w) {
-      if (degree(g, nV, v) % 2 == 0 || degree(g, nV, w) % 2 == 0)
-	      return false;
-   } else if (degree(g, nV, v) % 2 != 0) {
-      return false;
-   }
+   if(v != w) {
+      if(degree(g, nV, v) % 2 == 0 || degree(g, nV, w) % 2 == 0)
+         return false;
+   } else if(degree(g, nV, v) % 2 != 0) return false;
+
    Vertex x;
-   for (x = 0; x < nV; x++)
-      if (x != v && x != w && degree(g, nV, x) % 2 != 0)
-	      return false;
+   for(x = 0; x < nV; x++) {
+      if(x != v && x != w && degree(g, nV, x) % 2 != 0)
+         return false;
+   }
+
    return true;
 }
+
+
 
 int main(void) {
    Edge e;

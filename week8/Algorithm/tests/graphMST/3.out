@@ -1,0 +1,62 @@
+the min is 10000.000000 the dis[0] is 0.000000 the setV[0] is 0
+ the min is 0.000000 the dis[1] is 10000.000000 the setV[1] is 1
+ the min is 0.000000 the dis[2] is 10000.000000 the setV[2] is 2
+ the min is 0.000000 the dis[3] is 10000.000000 the setV[3] is 3
+ the min is 0.000000 the dis[4] is 10000.000000 the setV[4] is 4
+ the minindex is 0
+the v is 0
+the pred[1] is 0
+the pred[2] is 0
+the pred[3] is 0
+the min is 10000.000000 the dis[0] is 0.000000 the setV[0] is -1
+ the min is 10000.000000 the dis[1] is 3.000000 the setV[1] is 1
+ the min is 3.000000 the dis[2] is 2.000000 the setV[2] is 2
+ the min is 2.000000 the dis[3] is 8.000000 the setV[3] is 3
+ the min is 2.000000 the dis[4] is 10000.000000 the setV[4] is 4
+ the minindex is 2
+the v is 2
+the pred[3] is 2
+the pred[4] is 2
+the min is 10000.000000 the dis[0] is 0.000000 the setV[0] is -1
+ the min is 10000.000000 the dis[1] is 3.000000 the setV[1] is 1
+ the min is 3.000000 the dis[2] is 2.000000 the setV[2] is -1
+ the min is 3.000000 the dis[3] is 3.000000 the setV[3] is 3
+ the min is 3.000000 the dis[4] is 7.000000 the setV[4] is 4
+ the minindex is 1
+the v is 1
+the min is 10000.000000 the dis[0] is 0.000000 the setV[0] is -1
+ the min is 10000.000000 the dis[1] is 3.000000 the setV[1] is -1
+ the min is 10000.000000 the dis[2] is 2.000000 the setV[2] is -1
+ the min is 10000.000000 the dis[3] is 3.000000 the setV[3] is 3
+ the min is 3.000000 the dis[4] is 7.000000 the setV[4] is 4
+ the minindex is 3
+the v is 3
+the min is 10000.000000 the dis[0] is 0.000000 the setV[0] is -1
+ the min is 10000.000000 the dis[1] is 3.000000 the setV[1] is -1
+ the min is 10000.000000 the dis[2] is 2.000000 the setV[2] is -1
+ the min is 10000.000000 the dis[3] is 3.000000 the setV[3] is -1
+ the min is 10000.000000 the dis[4] is 7.000000 the setV[4] is 4
+ the minindex is 4
+the v is 4
+the pred[0] is -1
+the pred[1] is 0
+the pred[2] is 0
+the pred[3] is 2
+the pred[4] is 2
+Graph:
+Number of vertices: 5
+Number of edges: 8
+Edge 0 - 1: 3.000000
+Edge 0 - 2: 2.000000
+Edge 0 - 3: 8.000000
+Edge 1 - 2: 4.000000
+Edge 1 - 4: 6.000000
+Edge 2 - 3: 1.000000
+Edge 2 - 4: 5.000000
+Edge 3 - 4: 7.000000
+
+Minimum Spanning Tree:
+Number of vertices: 5
+Number of edges: 2
+Edge 0 - 2: 2.000000
+Edge 2 - 4: 5.000000

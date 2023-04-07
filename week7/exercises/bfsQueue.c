@@ -7,47 +7,27 @@
 
 int visited[MAX_NODES];  // array to store visiting order
                          // indexed by vertex 0..nV-1
+
 bool findPathBFS(Graph g, int nV, Vertex src, Vertex dest) {
-   for(int i = 0; i < MAX_NODES; i++)
+   for (int i = 0; i < MAX_NODES; i++)
       visited[i] = -1;
-   visited[src] = src;
-   queue q = newQueue();
-   QueueEnqueue(q, src);
-   while(!QueueIsEmpty(q)) {
-      int w = QueueDequeue(q);
-      for(int v = 0; v < nV; v++) {
-         if(adjacent(g, w, v) && visited[v] == -1) {
-            QueueEnqueue(q, v);
-            visited[v] = w;
-            if(v == dest)
-               return true;
+      visited[src] = src;
+      queue q = newQueue();
+      QueueEnqueue(q, src);
+      while(!QueueIsEmpty(q)) {
+         int w = QueueDequeue(q);
+         for (int v = 0; v <nV; v++) {
+            if(adjacent(g, w, v) && visited[v] == -1) {
+               QueueEnqueue(q, v);
+               visited[v] = w;
+               if(v == dest) return true;
+            }
          }
       }
-   }
    return false;
 }
-/*bool findPathBFS(Graph g, int nV, Vertex src, Vertex dest) {
-   Vertex v;
-   for (v = 0; v < nV; v++)
-      visited[v] = -1;
 
-   visited[src] = src;
-   queue Q = newQueue();
-   QueueEnqueue(Q, src);
-   while (!QueueIsEmpty(Q)) {
-      v = QueueDequeue(Q);
-      Vertex w;
-      for (w = 0; w < nV; w++)
-	 if (adjacent(g, v, w) && visited[w] == -1) {
-	    visited[w] = v;
-	    if (w == dest)
-	       return true;
-	    else
-	       QueueEnqueue(Q, w);
-	 }
-   }
-   return false;
-}*/
+
 int main(void) {
    int V = 9;
    Graph g = newGraph(V);

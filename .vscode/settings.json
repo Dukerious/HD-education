@@ -2,6 +2,10 @@
     "files.associations": {
         "array": "c",
         "string": "c",
-        "string_view": "c"
-    }
+        "string_view": "c",
+        "random": "c",
+        "limits": "c",
+        "algorithm": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
