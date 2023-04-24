@@ -1,0 +1,22 @@
+Question 5
+
+(a) Describe and justify the steps you would take to determine which
+    sorting algorithm the program uses.
+
+Selection sort is O(n^2) on average, whereas median-of-three quicksort is
+O(n log n). Thus we should determine the time complexity of the program
+by running it on inputs of various sizes (e.g., 10000, 20000, etc.) and
+observing the time taken. If the time taken as the input size increases
+follows a quadratic trend, then the program uses selection sort.
+Otherwise, the program uses median-of-three quicksort.
+
+(b) Is the sorting algorithm that the program uses stable? How confident
+    are you in your conclusion? Explain your answer.
+
+The output matches what would be produced by a stable sorting algorithm,
+since items with the same first number have remained in the same relative
+order. However this does not guarantee that the sorting algorithm is
+stable, as it is possible for an unstable sorting algorithm to produce
+the same output as a stable sorting algorithm. We conclude that the
+program likely uses a stable sorting algorithm, but we are not 100%
+certain.

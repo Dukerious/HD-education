@@ -1,0 +1,13 @@
+Question 8
+
+Which of the given statements about tries (A, B, C or D) is false?
+Briefly explain why the statement you selected is false.
+
+B is false, because it is perfectly valid to insert words which are
+prefixes of other words or which extend other words. For example if
+the trie contains the word NO and then we insert the word NODE then
+we simply extend the path given by NO with D and E.
+
+Note that C is true. Each word does not necessarily correspond to
+a leaf node, but each leaf node does correspond to a word, which is
+what the statement says.

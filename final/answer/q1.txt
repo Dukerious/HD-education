@@ -1,0 +1,39 @@
+Question 1
+
+(a) What is the maximum input size that can be processed? Justify your
+    answer.
+
+Our computer can process an input of size 10 in one day. Now since the
+algorithm runs in time O(2^n), our computer can process an input of size...
+    11 in 2 days
+    12 in 4 days
+    13 in 8 days
+    14 in 16 days
+    15 in 32 days
+    16 in 64 days
+    17 in 128 days
+    18 in 256 days
+    19 in 512 days
+    20 in 1024 days
+
+Our computer will be able to process an input of size 19 in 1000 days.
+The faster computer can process in one day what our computer can process
+in 1000 days, since it is 1000 times faster. Hence the answer is 19.
+
+(b) Which of the two algorithms is more efficient? Justify your answer.
+
+If we use binary search, we only need two comparisons to reduce the search
+space from n to n/4, since we halve the search space from n to n/2 then
+halve again to n/4. But quad search would need three comparisons.
+Hence binary search is more efficient.
+
+(c) What are the time complexities of fnA() and fnB() in terms of a and
+    b? Justify your answer.
+
+Each recursive call of fnA increases a by 1, until the base case where a
+equals b. Hence the number of calls is equal to the difference between a
+and b. The rest of the work in the function is O(1).
+Therefore fnA() is O(b - a).
+
+fnB() behaves similarly to fnA(), but it also calls fnA() on each call
+of fnB(). Thus fnB() is O((b - a)^2).

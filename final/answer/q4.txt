@@ -1,0 +1,14 @@
+Question 4
+
+Which of the given algorithms could have been used to construct the
+mininum spanning tree? Justify your answer.
+
+Kruskal's algorithm.
+
+Out of the given algorithms, only Kruskal's algorithm and Prim's
+algorithm are used to construct minimum spanning trees. But during
+the execution of Prim's algorithm, every new edge added to the MST
+must be connected to the edges that have already been added. The
+given sequence of edges does not satisfy this condition. Meanwhile,
+Kruskal's algorithm does not have this property, so it could have
+been used to construct the MST.
