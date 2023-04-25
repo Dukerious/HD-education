@@ -1,0 +1,20 @@
+Question 7
+
+(a) How many items are examined in searching for the key 42? Justify
+    your answer.
+
+42 % 11 = 9 -> it will be in slot 9
+3 * 11 + 9 -> 42 So, before 42 have 4 items.
+
+(b) How many items are examined in searching for the key 111? Justify
+    your answer.
+
+100 % 11 = 1 -> it will be in slot 1.
+9 * 11 + 1 -> 100 -> it will be search for 10 items.
+
+(c) What is the worst-case search cost after N total items have been
+    inserted? Justify your answer.
+
+O((N - (N % 11)) / 11 + 1) -> ceil(N/11)
+
+

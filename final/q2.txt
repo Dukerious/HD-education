@@ -1,0 +1,13 @@
+Question 2
+
+Explain why the compilation error occurred and briefly describe how it
+can be fixed.
+
+Only typedef the graph pointer but not complete define the content inside the struct.
+
+method1:
+    use buildin function inside the graph.h, not directly visit the graph struct.
+    Which means use an interface.
+method2:
+    declare the graph struct details in graph.h, not just pointer.
+

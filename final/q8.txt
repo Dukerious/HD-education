@@ -1,0 +1,8 @@
+Question 8
+
+Which of the given statements about tries (A, B, C or D) is false?
+Briefly explain why the statement you selected is false.
+
+B
+eg: No and None
+None's prefix is No

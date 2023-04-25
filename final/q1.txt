@@ -1,0 +1,21 @@
+Question 1
+
+(a) What is the maximum input size that can be processed? Justify your
+    answer.
+
+1000 * 2^(10) = 2^n
+2^n = 1000 * 2^10
+n = log2(1024000) -> 19
+
+(b) Which of the two algorithms is more efficient? Justify your answer.
+Binary search searches -> O(logn)
+Quad search searches -> 3*O(log4n)
+So, when logn < 3log4n -> n > 1
+thus, binary search searches more efficient
+
+(c) What are the time complexities of fnA() and fnB() in terms of a and
+    b? Justify your answer.
+    fnA() -> O(b- a + 1)
+    fnB() -> O((b- a + 1)^2)
+
+

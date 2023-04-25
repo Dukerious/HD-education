@@ -1,0 +1,13 @@
+Question 4
+
+Which of the given algorithms could have been used to construct the
+mininum spanning tree? Justify your answer.
+
+Kruskal's Algorithm.
+
+The MST algorithm are Kruskal and Prim.
+But according to the edge insert orders, it can not be Prim.
+
+Since In Prim' Algorithm, 
+when we insert an edge e, the one of the vertex, should be used.
+

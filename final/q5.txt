@@ -1,0 +1,15 @@
+Question 5
+
+(a) Describe and justify the steps you would take to determine which
+    sorting algorithm the program uses.
+    
+compare their execute time. the selection sort should be display O(n^2) and quick sort should be O(nlogn)
+
+
+(b) Is the sorting algorithm that the program uses stable? How confident
+    are you in your conclusion? Explain your answer.
+
+Only for this input, it seems like it is stable
+But may be is coincidence, we can't say 100% it is stable.
+
+

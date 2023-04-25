@@ -1,0 +1,33 @@
+Question 6
+
+Which of the data structures is most suitable? Justify your answer.
+You must use time complexities as a basis for your justification.
+
+
+Use AVL tree, its faster.
+
+Ordered Linked List:
+    push its O(n), since we need to find the insert position.
+    pop its O(1), since just remove the head.
+    PrintInOrder its O(n), since we need to meet each item.
+
+Ordered Array:
+    push its O(n), need to find the correct insert position, and shift items.
+    pop its O(n), we need to rearrange all items after pop.
+    PrintInOrder its O(n), since we need to meet each item.
+
+AVL Tree:
+    push its O(logn), since its height balance, we need to find leaf.
+    pop its O(logn), since we need to find highest priority through the height.
+    PrintInOrder its O(n), since we need to meet each item.
+
+Hashtable:
+    Can't make sure inorder. So discard it.
+
+Heap:
+    push its O(logn), since we need to fixup.
+    pop also its O(logn), since we need to fixdown.
+    PrintInOrder its O(nlogn), since we need to pop each item and print.
+
+    conclusion:
+        for the time complexity I prefer use AVL tree, its faster.
