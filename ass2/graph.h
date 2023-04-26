@@ -1,6 +1,5 @@
 typedef struct graph *Graph;
 typedef int Vertex;
-
 Graph GraphNew(int nV);
 void GraphFree(Graph g);
 int GraphNumVertices(Graph g);

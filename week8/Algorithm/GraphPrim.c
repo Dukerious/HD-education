@@ -175,7 +175,7 @@ Graph GraphMST(Graph g) {
         Edge next = PQExtract(edges);
 
         //O(E)
-        while(usedV[next.v] && usedV[next.w]) {
+        while((!usedV[next.v] && usedV[next.w]) || (usedV[next.v] && !usedV[next.w])) {
             next = PQExtract(edges);
         }
 

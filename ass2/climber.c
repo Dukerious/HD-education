@@ -23,7 +23,6 @@ static Graph BuildGraphTask2(Rock *rocks, int numrocks, int reach, int hight, in
 
 struct path findShortestPath(Wall w, int reach, Colour colour) {
     struct path p = {0, NULL};
-
     int numRocks = WallNumRocks(w);
     int wallhight = WallHeight(w);
     int wallwidth = WallWidth(w);
@@ -42,7 +41,6 @@ struct path findShortestPath(Wall w, int reach, Colour colour) {
         return p;
     }
     Graph g = BuildGraphTask1(rocks, numRocksWithColor, reach);
-
     double min = -1.0;
     int *minpath = NULL;
     for(int i = 1; i < wallwidth; i++) {
