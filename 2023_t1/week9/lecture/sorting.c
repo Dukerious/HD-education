@@ -23,7 +23,7 @@ void swap(int a[], int m, int n);
 int main(void) {
     int array[] = { 18, 14, 17, 19, 8, 13, 6, 8, 18, 5, 20, 13 };
 
-    shellSort(array, 0, 11);
+    merge_sort(array, 0, 11);
 
     print_array(array, 12);
     return 0;
